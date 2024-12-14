@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Buttons</string>
+
+    <string name="title">~Inventario de \nRopa Deportiva~</string>
+
+    <string name="codigo">Código:</string>
+    <string name="marca">Marca:</string>
+    <string name="modelo">Modelo:</string>
+    <string name="talla">Talla:</string>
+    <string name="colores">Colores:</string>
+    <string name="costo">Costo:</string>
+
+    <!-- Tallas -->
+    <string name="chica">Chica</string>
+    <string name="mediana">Mediana</string>
+    <string name="grande">Grande</string>
+
+    <!-- Colores -->
+    <string name="negro">Negro</string>
+    <string name="blanco">Blanco</string>
+    <string name="azul">Azul</string>
+    <string name="rojo">Rojo</string>
+    <string name="naranja">Naranja</string>
+
+    <!-- Buttons -->
+    <string name="add">Registrar</string>
+    <string name="search">Buscar</string>
+    <string name="delete">Eliminar</string>
+    <string name="clean">Limpiar</string>
+    <!--    <string name=""></string>-->
+</resources>

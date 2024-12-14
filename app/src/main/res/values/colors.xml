@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!--Ropa Deportiva App-->
+    <color name="darker">#212121</color>
+    <color name="dark">#3C3D37</color>
+    <color name="dusty">#F0ECE5</color>
+    <color name="green">#0E6145</color>
+    <color name="green_light">#6E9262</color>
+    <color name="blue">#22559C</color>
+    <color name="blue_light">#C4D7FF</color>
+    <color name="red">#D92027</color>
+    <color name="red_light">#EF5A6F</color>
+    <color name="orange">#FF885B</color>
+    <color name="orange_light">#EBB486</color>
+</resources>

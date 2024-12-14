@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:background="@color/dusty"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/title"
+        android:textAllCaps="false"
+        android:textColor="@color/darker"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:lines="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.06" />
+
+    <EditText
+        android:id="@+id/edtCodigo"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="@string/codigo"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:inputType="text"
+        android:textColorHint="@color/darker"
+        app:layout_constraintEnd_toStartOf="@id/txtColores"
+        app:layout_constraintTop_toBottomOf="@id/txtTitle"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edtMarca"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="@string/marca"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:inputType="text"
+        android:textColorHint="@color/darker"
+        app:layout_constraintEnd_toStartOf="@id/txtColores"
+        app:layout_constraintTop_toBottomOf="@id/edtCodigo"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edtModelo"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="@string/modelo"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:inputType="text"
+        android:textColorHint="@color/darker"
+        app:layout_constraintStart_toEndOf="@id/gpoRadTallas"
+        app:layout_constraintTop_toBottomOf="@id/chColorNaranja"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txtTallas"
+        android:layout_marginTop="24dp"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:text="@string/talla"
+        android:textStyle="bold"
+        android:textColor="@color/darker"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtMarca"
+        app:layout_constraintEnd_toStartOf="@id/txtColores" />
+
+    <RadioGroup
+        android:id="@+id/gpoRadTallas"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTallas"
+        app:layout_constraintEnd_toStartOf="@id/txtColores">
+
+        <RadioButton
+            android:id="@+id/radTallaChica"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@drawable/custom_check_box_selector"
+            app:buttonIcon="@drawable/custom_check_box_selector"
+            android:buttonTint="@color/dark"
+            android:textColor="@color/dark"
+            android:checked="false"
+            android:text="@string/chica"
+            app:useMaterialThemeColors="false" />
+
+        <RadioButton
+            android:id="@+id/radTallaMediana"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@drawable/custom_check_box_selector"
+            app:buttonIcon="@drawable/custom_check_box_selector"
+            android:buttonTint="@color/dark"
+            android:textColor="@color/dark"
+            android:checked="false"
+            android:text="@string/mediana"
+            app:useMaterialThemeColors="false" />
+
+        <RadioButton
+            android:id="@+id/radTallaGrande"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@drawable/custom_check_box_selector"
+            app:buttonIcon="@drawable/custom_check_box_selector"
+            android:buttonTint="@color/dark"
+            android:textColor="@color/dark"
+            android:checked="false"
+            android:text="@string/grande"
+            app:useMaterialThemeColors="false"  />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/txtColores"
+        android:layout_marginTop="24dp"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:text="@string/colores"
+        android:textColor="@color/darker"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/edtCodigo"
+        app:layout_constraintTop_toBottomOf="@id/txtTitle"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+   <CheckBox
+        android:id="@+id/chColorNegro"
+        android:layout_marginTop="8dp"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:button="@drawable/custom_check_box_selector"
+        app:buttonIcon="@drawable/custom_check_box_selector"
+        android:buttonTint="@color/black"
+        android:textColor="@color/black"
+        android:checked="false"
+        android:text="@string/negro"
+        android:textStyle="bold"
+        app:useMaterialThemeColors="false"
+        app:layout_constraintStart_toEndOf="@id/edtCodigo"
+        app:layout_constraintTop_toBottomOf="@id/txtColores"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <CheckBox
+        android:id="@+id/chColorBlanco"
+        android:layout_marginTop="8dp"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:button="@drawable/custom_check_box_selector"
+        app:buttonIcon="@drawable/custom_check_box_selector"
+        android:buttonTint="@color/white"
+        android:textColor="@color/white"
+        android:background="@color/black"
+        android:checked="false"
+        android:text="@string/blanco"
+        android:textStyle="bold"
+        app:useMaterialThemeColors="false"
+        app:layout_constraintStart_toEndOf="@id/edtCodigo"
+        app:layout_constraintTop_toBottomOf="@id/chColorNegro"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <CheckBox
+        android:id="@+id/chColorAzul"
+        android:layout_marginTop="8dp"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:button="@drawable/custom_check_box_selector"
+        app:buttonIcon="@drawable/custom_check_box_selector"
+        android:buttonTint="@color/blue"
+        android:textColor="@color/blue"
+        android:checked="false"
+        android:text="@string/azul"
+        android:textStyle="bold"
+        app:useMaterialThemeColors="false"
+        app:layout_constraintStart_toEndOf="@id/edtCodigo"
+        app:layout_constraintTop_toBottomOf="@id/chColorBlanco"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <CheckBox
+        android:id="@+id/chColorRojo"
+        android:layout_marginTop="8dp"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:button="@drawable/custom_check_box_selector"
+        app:buttonIcon="@drawable/custom_check_box_selector"
+        android:buttonTint="@color/red"
+        android:textColor="@color/red"
+        android:checked="false"
+        android:text="@string/rojo"
+        android:textStyle="bold"
+        app:useMaterialThemeColors="false"
+        app:layout_constraintStart_toEndOf="@id/edtCodigo"
+        app:layout_constraintTop_toBottomOf="@id/chColorAzul"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <CheckBox
+        android:id="@+id/chColorNaranja"
+        android:layout_marginTop="8dp"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:button="@drawable/custom_check_box_selector"
+        app:buttonIcon="@drawable/custom_check_box_selector"
+        android:buttonTint="@color/orange"
+        android:textColor="@color/orange"
+        android:checked="false"
+        android:text="@string/naranja"
+        android:textStyle="bold"
+        app:useMaterialThemeColors="false"
+        app:layout_constraintStart_toEndOf="@id/edtCodigo"
+        app:layout_constraintTop_toBottomOf="@id/chColorRojo"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+        android:id="@+id/edtCosto"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="@string/costo"
+        android:inputType="number|numberDecimal"
+        android:textColorHint="@color/darker"
+        android:textSize="16sp"
+
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gpoRadTallas" />
+
+    <ImageButton
+        android:id="@+id/ibtnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/dark"
+        android:onClick="onClick"
+        android:text="@string/add"
+        app:layout_constraintEnd_toStartOf="@+id/ibtnSearch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtCosto"
+        app:srcCompat="@drawable/baseline_add_24"
+        app:tint="@color/dusty" />
+
+    <ImageButton
+        android:id="@+id/ibtnSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/dark"
+        android:onClick="onClick"
+        android:text="@string/search"
+        app:layout_constraintEnd_toStartOf="@+id/ibtnClean"
+        app:layout_constraintStart_toEndOf="@+id/ibtnAdd"
+        app:layout_constraintTop_toBottomOf="@id/edtCosto"
+        app:srcCompat="@drawable/baseline_search_24"
+        app:tint="@color/dusty" />
+
+    <ImageButton
+        android:id="@+id/ibtnClean"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/dark"
+        android:onClick="onClick"
+        android:text="@string/clean"
+        app:layout_constraintEnd_toStartOf="@id/ibtnDelete"
+        app:layout_constraintStart_toEndOf="@+id/ibtnSearch"
+        app:layout_constraintTop_toBottomOf="@id/edtCosto"
+        app:srcCompat="@drawable/baseline_restore_24"
+        app:tint="@color/dusty" />
+
+    <ImageButton
+        android:id="@+id/ibtnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/dark"
+        android:onClick="onClick"
+        android:text="@string/delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ibtnClean"
+        app:layout_constraintTop_toBottomOf="@id/edtCosto"
+        app:srcCompat="@drawable/baseline_delete_24"
+        app:tint="@color/dusty" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
